@@ -28,7 +28,7 @@ module HTML
           params << "rel=0" if hide_related
           src += "?#{params.join '&'}" unless params.empty?
 
-          %{#{close_tag}<div class="video youtube"><iframe width="#{width}" height="#{height}" src="#{src}" frameborder="#{frameborder}" allowfullscreen></iframe></div>}
+          %{#{close_tag}<div class="video youtube"><iframe width="#{width}" height="#{height}" data-src="#{src}" src="" frameborder="#{frameborder}" allowfullscreen></iframe></div>}
         end
       end
     end
